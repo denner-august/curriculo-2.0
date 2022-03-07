@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
     background-color:  var(--body-bg-color);
 }
 
-h1,h2,p{
+h1,h2,p,li,a{
     color:var(--text-color);
 }
 
@@ -29,6 +29,7 @@ h1,h2,p{
   gap: 10px 10px;
   grid-auto-flow: row;
   height: 150vh ;
+  
 }
 
 .social { 
