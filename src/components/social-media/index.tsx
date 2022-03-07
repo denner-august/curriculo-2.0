@@ -7,7 +7,12 @@ import Github from "../../../public/image/social-icons/github.png";
 import whatsapp from "../../../public/image/social-icons/whatsapp.png";
 import Email from "../../../public/image/social-icons/email.png";
 
-export default function Social_Media() {
+export default function Social_Media(): JSX.Element {
+  function CopyEmail(email: any) {
+    navigator.clipboard.writeText(email.target.innerHTML);
+    alert("email copiado");
+  }
+
   return (
     <Container className="social-media">
       <ul>
@@ -66,7 +71,9 @@ export default function Social_Media() {
             alt="whatsapp"
           />
           <a href="mailto:denner.augusto90@gmail.com">
-            <p>denner.augusto90@gmail.com</p>
+            <p onClick={(event) => CopyEmail(event)}>
+              denner.augusto90@gmail.com
+            </p>
           </a>
         </li>
       </ul>
