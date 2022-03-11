@@ -17,9 +17,13 @@ export const GlobalStyle = createGlobalStyle`
     background-color:  var(--body-bg-color);
 }
 
-h1,h2,p,li,a{
+h1,h2,p,ul,li,a{
     color:var(--text-color);
+    background-color:var( --bg-cards);
 }
+ li{
+   list-style: none;
+ }
 
 .container{
   display: grid;
@@ -35,7 +39,8 @@ h1,h2,p,li,a{
 .social { 
 grid-area: 2 / 1 / 3 / 2; 
 background-color:var( --bg-cards);
-border-radius:var(--bord-card)   }
+border-radius:var(--bord-card)   
+}
 
 .social-media {   
 grid-area: 2 / 1 / 3 / 2;
@@ -49,7 +54,8 @@ border-radius:var(--bord-card)
 
 .skills { grid-area: 3 / 1 / 4 / 2;
 background-color:var( --bg-cards);
-border-radius:var(--bord-card) }
+border-radius:var(--bord-card) ;
+}
 
 .experience { grid-area: 4 / 1 / 5 / 2;
 background-color:var( --bg-cards);
