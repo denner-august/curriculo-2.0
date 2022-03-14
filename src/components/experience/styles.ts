@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
 display: flex;
 flex-direction: column;
+height: auto;
 ul{
     display: flex;
     flex-direction: column;
@@ -11,6 +12,7 @@ ul{
     li{
         list-style: disc;
         font-size: 1.2rem;
+        
 
     }
     li:hover{
@@ -19,7 +21,9 @@ ul{
         cursor: pointer;
     }
 }
+
 p{
+    
     font-size: 1.5rem;
 }
 `
