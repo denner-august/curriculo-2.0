@@ -2,13 +2,17 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     display:flex ;
-    flex-direction: column ;
-    justify-content: space-between ;
+    flex-direction: row ;
+    justify-content: space-around ;
     align-items:center;
+
    
     .imagem{
         background-color:var( --bg-cards);
-        border-radius: 10%;
+        
+        img{
+            border-radius: 0.5rem;
+        }
     }
 
     p{  
@@ -18,9 +22,18 @@ export const Container = styled.div`
         background-color:var( --bg-cards);
 
     }
+`
 
+export const Names = styled.div`
+display: flex;
+flex-direction: column;
+/* background-color: red; */
+background-color:var( --bg-cards);
 
+p:hover{
+    color: white;
+    cursor: default;
+}
 
-    
 
 `
