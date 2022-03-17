@@ -10,6 +10,7 @@ li{
     flex-direction:column ;
     text-align:center ;
     list-style: none ;
+    margin: 1rem;
 
     a{
     text-decoration:none ;
@@ -27,12 +28,10 @@ li{
 }
 
 ul{
- height:auto ;
- display: flex ;
+height:auto ;
+display: flex ;
 flex-wrap: wrap ;
-flex-direction:column ;
+flex-direction:row ;
 justify-content:center ;
- 
- 
 }
 `
