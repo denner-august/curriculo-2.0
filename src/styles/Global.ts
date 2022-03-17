@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 *{
-    /* height: 100% ; */
+  
     margin: 0;
     padding: 0.5rem;
     box-sizing: border-box;
@@ -27,8 +27,8 @@ h1,h2,p,ul,li,a{
 
 .container{
   display: grid;
-  grid-template-columns: 1fr 2fr 2fr;
-  grid-template-rows: 1fr 1fr 0.5fr 0.5fr 0.5fr;
+  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-rows: 0.3fr 1fr 0.5fr 0.5fr 0.5fr;
   grid-auto-columns: 1fr;
   gap: 10px 10px;
   grid-auto-flow: row;
