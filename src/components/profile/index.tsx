@@ -5,7 +5,13 @@ export default function Profile() {
   return (
     <Container className="profile">
       <div className="imagem">
-        <Image src={ImageProfile} height={150} width={100} quality={100} />
+        <Image
+          src={ImageProfile}
+          height={150}
+          width={100}
+          quality={100}
+          alt="imagem do usuario"
+        />
       </div>
       <Names>
         <p>Denner Augusto</p>

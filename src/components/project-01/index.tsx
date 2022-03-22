@@ -1,4 +1,3 @@
-export default function Project01({ dados }: any) {
-  console.log(dados);
+export default function Project01() {
   return <div className="project-01"></div>;
 }

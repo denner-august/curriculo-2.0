@@ -1,7 +1,7 @@
 import { Container } from "./styles";
 import Link from "next/link";
-import axios from "axios";
 export default function Projects({ dados }: any) {
+  console.log(dados);
   return (
     <Container className="projects">
       <h2>Meus projetos</h2>

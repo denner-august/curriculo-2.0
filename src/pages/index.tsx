@@ -10,6 +10,7 @@ import Project02 from "../components/project-02";
 import Post from "../components/recent-posts";
 import Projects from "../components/projects/index";
 import axios from "axios";
+import { GetStaticProps } from "next";
 
 export default function Principal({ dados }: any) {
   return (
@@ -21,27 +22,27 @@ export default function Principal({ dados }: any) {
       <Experience />
       <Education />
       <Projects dados={dados} />
-      <Project01 dados={dados} />
+      <Project01 />
       <Project02 />
       <Post />
     </ContainerPrincipal>
   );
 }
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const config = {
     headers: {
       Authorization: `Bearer ${process.env.NEXT_PUBLIC_VERCEL_KEY}`,
     },
   };
 
-  const request = axios
-    .get("https://api.vercel.com/v6/projects", config)
-    .then((response) => response);
+  const request = await axios.get("https://api.vercel.com/v6/projects", config);
 
   return {
     props: {
-      dados: await request,
+      dados: request.data,
     },
+
+    revalidate: 10080,
   };
-}
+};
