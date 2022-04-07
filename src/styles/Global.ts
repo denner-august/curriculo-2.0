@@ -28,7 +28,7 @@ h1,h2,p,ul,li,a{
 .container{
   display: grid;
   grid-template-columns: 2fr 2fr 2fr;
-  grid-template-rows: 0.3fr 1fr 0.5fr 0.5fr 0.5fr;
+  grid-template-rows: 0.3fr 1fr 0.5fr;
   grid-auto-columns: 1fr;
   gap: 10px 10px;
   grid-auto-flow: row;
@@ -69,17 +69,7 @@ border-radius:var(--bord-card);
 background-color:var( --bg-cards); 
 border-radius:var(--bord-card) }
 
-.project-01 { grid-area: 2 / 2 / 3 / 3; 
+.recent-posts { grid-area: 2 / 2 / 2/ 4;
 background-color:var( --bg-cards);
 border-radius:var(--bord-card) }
-
-.project-02 { grid-area: 2 / 3 / 3 / 4;
-background-color:var( --bg-cards);
-border-radius:var(--bord-card) }
-
-.recent-posts { grid-area: 3 / 2 / 4 / 4;
-background-color:var( --bg-cards);
-border-radius:var(--bord-card) }
-
-
 `
