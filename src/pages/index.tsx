@@ -15,16 +15,6 @@ import Swal from "sweetalert2";
 
 export default function Principal({ dados }: any) {
 
-  useEffect(()=>{
-    Swal.fire({
-      background: 'var(--body-bg-color)',
-      color:'white',
-      icon: 'warning',
-      iconColor: 'red',
-      text: 'Este projeto ainda está em desenvolvimento e pode conter falhas, por favor, não hesite em nos contatar.',
-    })
-  })
-
   return (
     <ContainerPrincipal className="container">
       <Profile />
