@@ -1,3 +1,3 @@
 export default function Post() {
-  return <div className="recent-posts"></div>;
+  return <div className="recent-posts"><p></p></div>;
 }
