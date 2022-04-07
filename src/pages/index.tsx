@@ -5,14 +5,26 @@ import Social_Media from "../components/social-media";
 import { ContainerPrincipal } from "../styles/styles";
 import Education from "../components/education/index";
 import Profile from "../components/profile";
-import Project01 from "../components/project-01/index";
-import Project02 from "../components/project-02";
 import Post from "../components/recent-posts";
 import Projects from "../components/projects/index";
 import axios from "axios";
 import { GetStaticProps } from "next";
+import { useEffect } from "react";
+import Swal from "sweetalert2";
+
 
 export default function Principal({ dados }: any) {
+
+  useEffect(()=>{
+    Swal.fire({
+      background: 'var(--body-bg-color)',
+      color:'white',
+      icon: 'warning',
+      iconColor: 'red',
+      text: 'Este projeto ainda está em desenvolvimento e pode conter falhas, por favor, não hesite em nos contatar.',
+    })
+  })
+
   return (
     <ContainerPrincipal className="container">
       <Profile />
@@ -22,8 +34,6 @@ export default function Principal({ dados }: any) {
       <Experience />
       <Education />
       <Projects dados={dados} />
-      <Project01 />
-      <Project02 />
       <Post />
     </ContainerPrincipal>
   );
@@ -32,17 +42,31 @@ export default function Principal({ dados }: any) {
 export const getStaticProps: GetStaticProps = async () => {
   const config = {
     headers: {
-      Authorization: `Bearer ${process.env.NEXT_PUBLIC_VERCEL_KEY}`,
+      Authorization: `Bearer ${process.env.VERCEL_KEY}`,
     },
   };
 
-  const request = await axios.get("https://api.vercel.com/v6/projects", config);
+  const request = await axios
+    .get("https://api.vercel.com/v6/projects", config)
+    .then((response) => response.data)
+    .then((response) => response.projects)
+    .then((response) => {
+      const projects = [
+        "curriculo-2-0",
+        "praticando-meu-front-end-react-js",
+        "previsao-do-tempo",
+      ];
+
+      return projects.map(
+        (projeto) =>
+          response.find((data: { name: string }) => data.name === projeto)?.alias.map((item:{domain:string}) => item.domain) ?? null
+    
+      );
+    });
 
   return {
     props: {
-      dados: request.data,
+      dados: request,
     },
-
-    revalidate: 10080,
   };
 };
