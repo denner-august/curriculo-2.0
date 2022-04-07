@@ -68,5 +68,9 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       dados: request,
     },
+    revalidate:86400 // um dia
+
+
+      
   };
 };
