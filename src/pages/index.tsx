@@ -9,11 +9,12 @@ import Post from "../components/recent-posts";
 import Projects from "../components/projects/index";
 import axios from "axios";
 import { GetStaticProps } from "next";
-import { useEffect } from "react";
-import Swal from "sweetalert2";
+
 
 
 export default function Principal({ dados }: any) {
+
+ 
 
   return (
     <ContainerPrincipal className="container">
@@ -30,39 +31,34 @@ export default function Principal({ dados }: any) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  // const config = {
-  //   headers: {
-  //     Authorization: `Bearer ${process.env.VERCEL_KEY}`,
-  //   },
-  // };
+  const config = {
+    headers: {
+      Authorization: `Bearer ${process.env.NEXT_PUBLIC_VERCEL_KEY}`,
+    },
+  };
 
-  // const request = await axios
-  //   .get("https://api.vercel.com/v6/projects", config)
-  //   .then((response) => response.data)
-  //   .then((response) => response.projects)
-  //   .then((response) => {
-  //     const projects = [
-  //       "curriculo-2-0",
-  //       "praticando-meu-front-end-react-js",
-  //       "previsao-do-tempo",
-  //     ];
+  const request = await axios
+    .get("https://api.vercel.com/v6/projects", config)
+    .then((response) => response.data)
+    .then((response) => response.projects)
+    .then((response) => {
+      const projects = [
+        "curriculo-2-0",
+        "praticando-meu-front-end-react-js",
+        "previsao-do-tempo",
+      ];
 
-  //     return projects.map(
-  //       (projeto) =>
-  //         response.find((data: { name: string }) => data.name === projeto)?.alias.map((item:{domain:string}) => item.domain) ?? null
+      return projects.map(
+        (projeto) =>
+          response.find((data: { name: string }) => data.name === projeto)?.alias.map((item:{domain:string}) => item.domain) ?? null
     
-  //     );
-  //   });
-
-  const request = ['curriculo-2-0', 'praticando-meu-front-end-react-js', 'previsao-do-tempo'];
+      );
+    });
 
   return {
     props: {
       dados: request,
     },
-    revalidate:86400 // um dia
-
-
-      
+    revalidate:86400,
   };
 };
