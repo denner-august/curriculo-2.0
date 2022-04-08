@@ -15,11 +15,13 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0.5rem;
     box-sizing: border-box;
     background-color:  var(--body-bg-color);
+
 }
 
 h1,h2,p,ul,li,a{
     color:var(--text-color);
     background-color:var( --bg-cards);
+    
 }
  li{
    list-style: none;
