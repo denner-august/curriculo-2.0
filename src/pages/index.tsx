@@ -54,7 +54,8 @@ export const getStaticProps: GetStaticProps = async () => {
         "curriculo-2-0",
         "praticando-meu-front-end-react-js",
         "previsao-do-tempo",
-      ];
+        "front-end-challenge-coodesh"
+        ];
 
       return projects.map(
         (projeto) =>
