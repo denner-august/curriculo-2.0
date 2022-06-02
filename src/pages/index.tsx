@@ -12,17 +12,19 @@ import { GetStaticProps } from "next";
 import { useEffect } from "react";
 import Swal from "sweetalert2";
 
+interface requestProps {
+  targets: { production: { name: string; url: string } };
+}
 
-export default function Principal({ dados }:{dados:{item:string}}) {
-
-  useEffect(()=>{
+export default function Principal({ dados }: { dados: { item: string } }) {
+  useEffect(() => {
     Swal.fire({
-      background: 'var(--body-bg-color)',
-      color: 'white',
-      icon: 'info',
-      text: 'Este é um Projeto ainda em desenvolvimento ',
-    })
-  })
+      background: "var(--body-bg-color)",
+      color: "white",
+      icon: "info",
+      text: "Este é um Projeto ainda em desenvolvimento ",
+    });
+  });
 
   return (
     <ContainerPrincipal className="container">
@@ -46,28 +48,49 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 
   const request = await axios
-    .get("https://api.vercel.com/v6/projects", config)
+    .get("https://api.vercel.com/v9/projects?limit=28", config)
     .then((response) => response.data)
-    .then((response) => response.projects)
-    .then((response) => {
-      const projects = [
-        "curriculo-2-0",
-        "praticando-meu-front-end-react-js",
-        "previsao-do-tempo",
-        "front-end-challenge-coodesh"
-        ];
+    .then((response) => response.projects);
 
-      return projects.map(
-        (projeto) =>
-          response.find((data: { name: string }) => data.name === projeto)?.alias.map((item:{domain:string}) => item.domain) ?? null
-    
+  const projects = [
+    "redux-learning",
+    "nlw-return",
+    "front-end-challenge-coodesh",
+    "url-short",
+    "fills-calcuer",
+    "room-homepage",
+    "formulario-de-inscricao",
+    "testimonial-from-users",
+    "hoteliour",
+    "fale-muito-mais-agora",
+  ];
+
+  interface ProjectProps {
+    targets: { production: { name: string; url: string } };
+  }
+
+  function filtraUrlName() {
+    const findProjects = projects.map((item) => {
+      return request.find(
+        (data: { targets: { production: { name: string } } }) =>
+          data.targets.production.name === item
       );
     });
 
+    const filterProjects = findProjects.map((item: ProjectProps) => {
+      return {
+        name: item.targets.production.name,
+        url: item.targets.production.url,
+      };
+    });
+
+    return filterProjects;
+  }
+
   return {
     props: {
-      dados: request,
+      dados: filtraUrlName(),
     },
-    revalidate:86400,
+    revalidate: 86400,
   };
 };

@@ -1,11 +1,16 @@
 import { Container } from "./styles";
 export default function Projects({ dados }: any) {
-
-  function RenderList(){
-    return dados.map((item: any) => {
+  function RenderList() {
+    return dados.map((item: { name: string; url: string }, index: string) => {
       return (
-        <li key={item}>
-          <a href={`https://${item}`}  target={'_blank'} rel="noopener noreferrer" >{item}</a>
+        <li key={index}>
+          <a
+            href={`https://${item.url}`}
+            target={"_blank"}
+            rel="noopener noreferrer"
+          >
+            {item.name}
+          </a>
         </li>
       );
     });
@@ -13,11 +18,9 @@ export default function Projects({ dados }: any) {
 
   return (
     <Container className="projects">
-      <h2>Projetos em desenvolvimento</h2>
+      <h2>Projetos Desenvolvidos</h2>
 
-      <ul>
-        {RenderList()}
-      </ul>
+      <ul>{RenderList()}</ul>
     </Container>
   );
 }
