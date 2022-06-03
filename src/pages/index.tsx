@@ -19,15 +19,10 @@ export default function Principal() {
       <Skills />
       <Experience />
       <Education />
-<<<<<<< Updated upstream
       <Projects />
       <Project01 />
       <Project02 />
-      <Post />
-=======
-      <Projects dados={dados} />
       {/* <Post /> */}
->>>>>>> Stashed changes
     </ContainerPrincipal>
   );
 }
