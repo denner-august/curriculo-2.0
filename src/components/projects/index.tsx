@@ -1,12 +1,26 @@
 import { Container } from "./styles";
-import Link from "next/link";
-export default function Projects() {
+export default function Projects({ dados }: any) {
+  function RenderList() {
+    return dados.map((item: { name: string; url: string }, index: string) => {
+      return (
+        <li key={index}>
+          <a
+            href={`https://${item.url}`}
+            target={"_blank"}
+            rel="noopener noreferrer"
+          >
+            {item.name}
+          </a>
+        </li>
+      );
+    });
+  }
+
   return (
     <Container className="projects">
-      <h2>Meus projetos</h2>
-      <button>
-        <Link href={"http://localhost:3000/Projetos"}>Veja todos</Link>
-      </button>
+      <h2>Projetos Desenvolvidos</h2>
+
+      <ul>{RenderList()}</ul>
     </Container>
   );
 }

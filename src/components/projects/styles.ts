@@ -2,35 +2,38 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
 display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-padding: 0px 4rem 0px 4rem;
+flex-direction: column;
+
 
 h2{
-    font-size: 2.2rem;
+    text-align: center;
+    height: 2.5rem;
+    width: 100%;
+    border-bottom: 0.3px solid #e6e6e6;
 }
 
-button{
-    cursor: pointer;
-    background-color: var( --bg-cards);
-    font-size: 1.5rem;
-    border: 1px;
-    border-radius: 1rem;
-    transition: 0.2s;
+h2:hover{
+    color:white;
+    cursor: default;
+}
 
-    a{
-        text-decoration: none;    
-    }
+ul{
+    display: flex;
+    flex-wrap: wrap;
 
-    a:hover{
-        color:white;
-    }
+    li{
+        display: flex;
 
-    a:active{
-    color: var( --bg-techs);
+        a{
+            text-decoration: none;
+        }
+
+        a:hover{
+            color: white;
+        }
     }
 }
+
 
 `
 
