@@ -1,11 +1,9 @@
 import Experience from "../components/experience";
 import Skills from "../components/skills";
-import Social from "../components/social";
 import Social_Media from "../components/social-media";
 import { ContainerPrincipal } from "../styles/styles";
 import Education from "../components/education/index";
 import Profile from "../components/profile";
-import Post from "../components/recent-posts";
 import Projects from "../components/projects/index";
 import axios from "axios";
 import { GetStaticProps } from "next";
@@ -29,15 +27,11 @@ export default function Principal({ dados }: { dados: { item: string } }) {
   return (
     <ContainerPrincipal className="container">
       <Profile />
-      {/* <Social /> */}
       <Social_Media />
       <Skills />
       <Experience />
       <Education />
-      <Projects />
-      <Project01 />
-      <Project02 />
-      {/* <Post /> */}
+      <Projects projects={dados} />
     </ContainerPrincipal>
   );
 }
