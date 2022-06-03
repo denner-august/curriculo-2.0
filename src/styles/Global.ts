@@ -25,7 +25,7 @@ h1,h2,p,ul,li,a{
    list-style: none;
  }
 
-.container{
+ /* .container{
   display: grid;
   grid-template-columns: 2fr 2fr 2fr;
   grid-template-rows: 0.3fr 1fr 0.5fr 0.5fr 0.5fr;
@@ -34,21 +34,15 @@ h1,h2,p,ul,li,a{
   grid-auto-flow: row;
 }
 
-.social { 
-grid-area: 2 / 1 / 3 / 2; 
+.profile { grid-area: 1 / 1 / 2 / 2;
 background-color:var( --bg-cards);
-border-radius:var(--bord-card)   
+border-radius:var(--bord-card)  
 }
-
 .social-media {   
 grid-area: 2 / 1 / 3 / 2;
 background-color:var( --bg-cards);
 border-radius:var(--bord-card)  }
 
-.profile { grid-area: 1 / 1 / 2 / 2;
-background-color:var( --bg-cards);
-border-radius:var(--bord-card)  
-}
 
 .skills { grid-area: 3 / 1 / 4 / 2;
 background-color:var( --bg-cards);
@@ -67,8 +61,10 @@ border-radius:var(--bord-card);
 
 .projects { grid-area: 1 / 2 / 2 / 4; 
 background-color:var( --bg-cards); 
-border-radius:var(--bord-card) }
+border-radius:var(--bord-card) } */
+ 
 
+<<<<<<< Updated upstream
 .project-01 { grid-area: 2 / 2 / 3 / 3; 
 background-color:var( --bg-cards);
 border-radius:var(--bord-card) }
@@ -83,3 +79,65 @@ border-radius:var(--bord-card) }
 
 
 `
+=======
+.container {  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "profile projects"
+    "social-media education"
+    "skills experience";
+  width: 100%;
+}
+
+.profile { grid-area: profile;
+  background-color:var( --bg-cards);
+border-radius:var(--bord-card)  }
+
+.social-media { grid-area: social-media;
+  background-color:var( --bg-cards);
+border-radius:var(--bord-card)  }
+
+.skills { grid-area: skills;
+  background-color:var( --bg-cards);
+border-radius:var(--bord-card)  }
+
+.projects { grid-area: projects;
+  background-color:var( --bg-cards);
+border-radius:var(--bord-card)  }
+
+.education { grid-area: education;
+  background-color:var( --bg-cards);
+border-radius:var(--bord-card)  }
+
+.experience { grid-area: experience;
+  background-color:var( --bg-cards);
+border-radius:var(--bord-card)  }
+
+
+
+@media screen and (max-width: 730px) {
+  .container {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px 0px;
+  grid-auto-flow: row;
+}
+
+.profile { grid-area: 1 / 1 / 2 / 2; }
+
+.social-media { grid-area: 2 / 1 / 3 / 2; }
+
+.skills { grid-area: 3 / 1 / 4 / 2; }
+
+.projects { grid-area: 3 / 1 / 4 / 2; }
+
+.education { grid-area: 4 / 1 / 5 / 2; }
+
+.experience { grid-area: 5 / 1 / 6 / 2; }
+
+}
+`;
+>>>>>>> Stashed changes

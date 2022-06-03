@@ -14,15 +14,20 @@ export default function Principal() {
   return (
     <ContainerPrincipal className="container">
       <Profile />
-      <Social />
+      {/* <Social /> */}
       <Social_Media />
       <Skills />
       <Experience />
       <Education />
+<<<<<<< Updated upstream
       <Projects />
       <Project01 />
       <Project02 />
       <Post />
+=======
+      <Projects dados={dados} />
+      {/* <Post /> */}
+>>>>>>> Stashed changes
     </ContainerPrincipal>
   );
 }
