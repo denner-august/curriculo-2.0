@@ -31,7 +31,7 @@ export default function Principal({ dados }: { dados: { item: string } }) {
       <Skills />
       <Experience />
       <Education />
-      <Projects projects={dados} />
+      <Projects dados={dados} />
     </ContainerPrincipal>
   );
 }
