@@ -1,39 +1,35 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-
-h2{
+  h2 {
     text-align: center;
     height: 2.5rem;
     width: 100%;
     border-bottom: 0.3px solid #e6e6e6;
-}
+  }
 
-h2:hover{
-    color:white;
+  h2:hover {
+    color: white;
     cursor: default;
-}
+  }
 
-ul{
+  ul {
     display: flex;
     flex-wrap: wrap;
 
-    li{
-        display: flex;
+    li {
+      display: flex;
+      font-size: clamp(1rem, 1.2rem, 2.5rem);
+      a {
+        text-decoration: none;
+      }
 
-        a{
-            text-decoration: none;
-        }
-
-        a:hover{
-            color: white;
-        }
+      a:hover {
+        color: white;
+      }
     }
-}
-
-
-`
-
+  }
+`;

@@ -27,69 +27,79 @@ h1,h2,p,ul,li,a{
    list-style: none;
  }
 
- /* .container{
-  display: grid;
-  grid-template-columns: 2fr 2fr 2fr;
-  grid-template-rows: 0.3fr 1fr 0.5fr;
+ .container {  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
   gap: 10px 10px;
   grid-auto-flow: row;
+  grid-template-areas:
+    "profile projects"
+    "social-media education"
+    "skills experience";
 }
 
-.profile { grid-area: 1 / 1 / 2 / 2;
-background-color:var( --bg-cards);
-border-radius:var(--bord-card)  
-}
-.social-media {   
-grid-area: 2 / 1 / 3 / 2;
-background-color:var( --bg-cards);
+.profile { grid-area: profile;
+
+background-color:var( --bg-cards); 
 border-radius:var(--bord-card)  }
 
+.social-media { grid-area: social-media;
 
-.skills { grid-area: 3 / 1 / 4 / 2;
-background-color:var( --bg-cards);
-border-radius:var(--bord-card) ;
-}
-
-.experience { grid-area: 4 / 1 / 5 / 2;
-background-color:var( --bg-cards);
-border-radius:var(--bord-card);
-}
-
-.education { grid-area: 5 / 1 / 6 / 2;
-background-color:var( --bg-cards);
-border-radius:var(--bord-card);
-}
-
-.projects { grid-area: 1 / 2 / 2 / 4; 
 background-color:var( --bg-cards); 
-border-radius:var(--bord-card) } */
+border-radius:var(--bord-card)  }
+
+.skills { grid-area: skills;
+
+background-color:var( --bg-cards); 
+border-radius:var(--bord-card)  }
+
+.projects { grid-area: projects;
+
+background-color:var( --bg-cards); 
+border-radius:var(--bord-card) 
+ }
+
+.education { grid-area: education;
+
+background-color:var( --bg-cards); 
+border-radius:var(--bord-card)  }
+
+.experience { grid-area: experience;
+
+background-color:var( --bg-cards); 
+border-radius:var(--bord-card)  }
+
  
-
-.recent-posts { grid-area: 2 / 2 / 2/ 4;
-background-color:var( --bg-cards);
-border-radius:var(--bord-card) }
-
 @media screen and (max-width: 768px) {
   .container {  display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
-  gap: 10px 0px;
+  gap: 10px 10px;
   grid-auto-flow: row;
+  grid-template-areas:
+    "profile"
+    "social-media"
+    "skills"
+    "projects"
+    "education"
+    "experience";
 }
 
-.profile { grid-area: 1 / 1 / 2 / 2; }
+.profile { grid-area: profile; }
 
-.social-media { grid-area: 2 / 1 / 3 / 2; }
+.social-media { grid-area: social-media; }
 
-.skills { grid-area: 3 / 1 / 4 / 2; }
+.projects { grid-area: skills; }
 
-.projects { grid-area: 3 / 1 / 4 / 2; }
+.skills { grid-area: projects; }
 
-.education { grid-area: 4 / 1 / 5 / 2; }
+.education { grid-area: education; }
 
-.experience { grid-area: 5 / 1 / 6 / 2; }
+.experience { grid-area: experience; }
 
 }
 `;

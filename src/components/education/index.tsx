@@ -3,7 +3,7 @@ import { Container } from "./styles";
 export default function Education() {
   return (
     <Container className="education">
-      <p>Educação</p>
+      <p>Cursos e especializações</p>
       <ul>
         <li>
           Graduação: Analise e desenvolvimento de sistemas <br /> Atualmente:
