@@ -2,17 +2,17 @@ import { Container } from "./styles";
 
 export default function Skills() {
   const tecnologias = [
-    "Javascript",
-    "Reactjs",
-    "Git",
-    "Github",
     "Html",
     "Css",
-    "Scss",
+    "Javascript",
     "Typescript",
+    "Reactjs",
+    "Scss",
     "Styled components",
-    "Postgres",
+    "Git",
+    "Github",
     "Modelagem de dados",
+    "Postgres",
   ];
 
   const renderTecnologia = () => {

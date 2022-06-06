@@ -15,7 +15,7 @@ export default function Profile() {
       </div>
       <Names>
         <p>Denner Augusto</p>
-        <p>Developer front-end</p>
+        <p>Desenvolvedor front-end</p>
       </Names>
     </Container>
   );

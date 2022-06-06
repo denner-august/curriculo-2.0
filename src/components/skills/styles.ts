@@ -14,21 +14,44 @@ export const Container = styled.div`
     flex-wrap: wrap;
 
     li {
-      color: #f0e7e7;
-      font-size: 1.1rem;
-      background-color: var(--text-color);
-      margin: 0.2rem;
+      min-width: 100px;
+      width: auto;
+      min-height: 50px;
       height: auto;
-      width: 100px;
+
+      font-size: 1.1rem;
+      margin: 0.2rem;
       border-radius: 0.5rem;
+
       text-align: center;
+
+      color: #f0e7e7;
+      background-color: var(--text-color);
     }
 
     li:hover {
       background-color: var(--bg-techs);
       color: black;
-      width: 110px;
       transition: 0.2s;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    p {
+      text-align: center;
+    }
+
+    ul {
+      flex: 1;
+      flex-direction: column;
+      justify-content: space-around;
+
+      li {
+        min-width: 0px;
+        width: auto;
+        min-height: 0;
+        height: auto;
+      }
     }
   }
 `;

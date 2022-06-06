@@ -14,7 +14,10 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0.5rem;
     box-sizing: border-box;
-    background-color:  var(--body-bg-color);
+  }
+  
+  body{
+  background-color:  var(--body-bg-color);
 
 }
 
@@ -75,7 +78,7 @@ border-radius:var(--bord-card)  }
 @media screen and (max-width: 768px) {
   .container {  display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto 1fr auto auto;
   grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
   gap: 10px 10px;
@@ -102,4 +105,13 @@ border-radius:var(--bord-card)  }
 .experience { grid-area: experience; }
 
 }
+
+@media screen and (max-width: 620px) {
+  *{
+    padding: 4px;
+  }
+}
+
+
+
 `;

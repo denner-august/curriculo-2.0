@@ -32,4 +32,22 @@ export const Container = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: 768px) {
+    ul {
+      flex-direction: row;
+      justify-content: left;
+
+      li {
+        min-width: 150px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 620px) {
+    ul {
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+  }
 `;

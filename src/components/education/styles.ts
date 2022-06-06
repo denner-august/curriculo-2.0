@@ -1,27 +1,40 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-p{
+  p {
     font-size: 1.5rem;
-}
+  }
 
-ul{
+  ul {
     display: flex;
     flex-direction: column;
     margin-left: 2rem;
 
-    li{
-        list-style: disc;
-        font-size: 1.2rem;
+    li {
+      list-style: disc;
+      font-size: 1.2rem;
+    }
+    li:hover {
+      color: white;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+  }
 
+  @media screen and (max-width: 768px) {
+    p {
+      text-align: center;
     }
-    li:hover{
-        color: white;
-        transition: 0.2s;
-        cursor: pointer;
+
+    ul {
+      margin-left: 0px;
+
+      li {
+        list-style: none;
+      }
     }
-}
-`
+  }
+`;
