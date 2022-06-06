@@ -74,4 +74,27 @@ border-radius:var(--bord-card) }
 .recent-posts { grid-area: 2 / 2 / 2/ 4;
 background-color:var( --bg-cards);
 border-radius:var(--bord-card) }
-`
+
+@media screen and (max-width: 768px) {
+  .container {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 1fr;
+  gap: 10px 0px;
+  grid-auto-flow: row;
+}
+
+.profile { grid-area: 1 / 1 / 2 / 2; }
+
+.social-media { grid-area: 2 / 1 / 3 / 2; }
+
+.skills { grid-area: 3 / 1 / 4 / 2; }
+
+.projects { grid-area: 3 / 1 / 4 / 2; }
+
+.education { grid-area: 4 / 1 / 5 / 2; }
+
+.experience { grid-area: 5 / 1 / 6 / 2; }
+
+}
+`;

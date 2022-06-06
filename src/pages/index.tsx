@@ -29,13 +29,11 @@ export default function Principal({ dados }: { dados: { item: string } }) {
   return (
     <ContainerPrincipal className="container">
       <Profile />
-      <Social />
       <Social_Media />
       <Skills />
       <Experience />
       <Education />
       <Projects dados={dados} />
-      <Post />
     </ContainerPrincipal>
   );
 }
