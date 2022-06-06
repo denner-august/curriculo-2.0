@@ -16,7 +16,6 @@ export const Container = styled.div`
     li {
       min-width: 100px;
       width: auto;
-      min-height: 50px;
       height: auto;
 
       font-size: 1.1rem;
@@ -45,10 +44,11 @@ export const Container = styled.div`
       flex: 1;
       flex-direction: column;
       justify-content: space-around;
+      align-items: center;
 
       li {
         min-width: 0px;
-        width: auto;
+        width: 70%;
         min-height: 0;
         height: auto;
       }

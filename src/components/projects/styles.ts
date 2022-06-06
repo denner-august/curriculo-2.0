@@ -22,7 +22,7 @@ export const Container = styled.div`
 
     li {
       display: flex;
-      font-size: clamp(1rem, 1.2rem, 2.5rem);
+      font-size: clamp(1rem, 1.3rem, 2.5rem);
       a {
         text-decoration: none;
       }
