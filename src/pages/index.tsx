@@ -77,7 +77,10 @@ export const getStaticProps: GetStaticProps = async () => {
     const filterProjects = findProjects.map((item: ProjectProps) => {
       return {
         name: item.targets.production.name,
-        url: item.targets.production.url,
+        url:
+          item.targets.production.name === "capitulo-2-ignite"
+            ? "capitulo-2-ignite.vercel.app/"
+            : item.targets.production.url,
       };
     });
 
