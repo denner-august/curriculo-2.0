@@ -54,6 +54,7 @@ export const getStaticProps: GetStaticProps = async () => {
     "front-end-challenge-coodesh",
     "url-short",
     "fills-calcuer",
+    "capitulo-2-ignite",
     "room-homepage",
     "formulario-de-inscricao",
     "testimonial-from-users",
