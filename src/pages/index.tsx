@@ -49,6 +49,7 @@ export const getStaticProps: GetStaticProps = async () => {
     .then((response) => response.projects);
 
   const projects = [
+    "praticando-meu-front-end-react-js",
     "redux-learning",
     "nlw-return",
     "front-end-challenge-coodesh",
