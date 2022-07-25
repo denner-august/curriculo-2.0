@@ -53,7 +53,6 @@ export const getStaticProps: GetStaticProps = async () => {
     "redux-learning",
     "nlw-return",
     "front-end-challenge-coodesh",
-    "url-short",
     "fills-calcuer",
     "capitulo-2-ignite",
     "room-homepage",
@@ -78,9 +77,12 @@ export const getStaticProps: GetStaticProps = async () => {
     const filterProjects = findProjects.map((item: ProjectProps) => {
       return {
         name: item.targets.production.name,
+        // url:item.targets.production.name === "capitulo-2-ignite"? "capitulo-2-ignite.vercel.app/" : item.targets.production.url,
         url:
           item.targets.production.name === "capitulo-2-ignite"
             ? "capitulo-2-ignite.vercel.app/"
+            : item.targets.production.name === "fills-calcuer"
+            ? "fills-calculator.vercel.app"
             : item.targets.production.url,
       };
     });
