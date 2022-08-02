@@ -31,11 +31,11 @@ h1,h2,p,ul,li,a{
  }
 
  .container {  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto;
   grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
-  gap: 10px 10px;
+  gap: 5px 5px;
   grid-auto-flow: row;
   grid-template-areas:
     "profile projects"
@@ -111,7 +111,4 @@ border-radius:var(--bord-card)  }
     padding: 4px;
   }
 }
-
-
-
 `;
