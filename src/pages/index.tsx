@@ -60,6 +60,7 @@ export const getStaticProps: GetStaticProps = async () => {
     "testimonial-from-users",
     "hoteliour",
     "fale-muito-mais-agora",
+    "ignite-interface-com-chakra-ui",
   ];
 
   interface ProjectProps {
@@ -77,12 +78,14 @@ export const getStaticProps: GetStaticProps = async () => {
     const filterProjects = findProjects.map((item: ProjectProps) => {
       return {
         name: item.targets.production.name,
-        // url:item.targets.production.name === "capitulo-2-ignite"? "capitulo-2-ignite.vercel.app/" : item.targets.production.url,
+
         url:
           item.targets.production.name === "capitulo-2-ignite"
             ? "capitulo-2-ignite.vercel.app/"
             : item.targets.production.name === "fills-calcuer"
             ? "fills-calculator.vercel.app"
+            : item.targets.production.name === "ignite-interface-com-chakra-ui"
+            ? "worldtrip5-chakra.vercel.app"
             : item.targets.production.url,
       };
     });
