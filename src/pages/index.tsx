@@ -46,6 +46,7 @@ export const getStaticProps: GetStaticProps = async () => {
     "hoteliour",
     "fale-muito-mais-agora",
     "ignite-interface-com-chakra-ui",
+    "ignite-fundamentos-next",
   ];
 
   interface ProjectProps {
@@ -71,6 +72,8 @@ export const getStaticProps: GetStaticProps = async () => {
             ? "fills-calculator.vercel.app"
             : item.targets.production.name === "ignite-interface-com-chakra-ui"
             ? "worldtrip5-chakra.vercel.app"
+            : item.targets.production.name === "ignite-fundamentos-next"
+            ? "ignite-fundamentos-next.vercel.app"
             : item.targets.production.url,
       };
     });
