@@ -7,23 +7,8 @@ import Profile from "../components/profile";
 import Projects from "../components/projects/index";
 import axios from "axios";
 import { GetStaticProps } from "next";
-import { useEffect } from "react";
-import Swal from "sweetalert2";
-
-interface requestProps {
-  targets: { production: { name: string; url: string } };
-}
 
 export default function Principal({ dados }: { dados: { item: string } }) {
-  useEffect(() => {
-    Swal.fire({
-      background: "var(--body-bg-color)",
-      color: "white",
-      icon: "info",
-      text: "Este é um Projeto ainda em desenvolvimento ",
-    });
-  });
-
   return (
     <ContainerPrincipal className="container">
       <Profile />
