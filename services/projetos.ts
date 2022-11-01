@@ -34,7 +34,7 @@ export function filtraUrlName(request: any) {
         item.targets.production.name === "capitulo-2-ignite"
           ? "capitulo-2-ignite.vercel.app/"
           : item.targets.production.name === "fills-calcuer"
-          ? "fills-calculator.vercel.app"
+          ? "fills-calculeitor.vercel.app/"
           : item.targets.production.name === "ignite-interface-com-chakra-ui"
           ? "worldtrip5-chakra.vercel.app"
           : item.targets.production.name === "ignite-fundamentos-next"
