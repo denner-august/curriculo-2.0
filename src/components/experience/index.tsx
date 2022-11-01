@@ -11,7 +11,7 @@ export default function Experience() {
         </li>
 
         <li>
-          Projeto: Flls-calcuer<br></br>
+          Projeto: Flls-Calculeitor<br></br>
           2021- Em Desenvolvimento/ Portifolio <br></br>
         </li>
 

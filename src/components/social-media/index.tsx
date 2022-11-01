@@ -45,22 +45,7 @@ export default function Social_Media(): JSX.Element {
             Github
           </a>
         </li>
-        <li>
-          <Image
-            width={50}
-            height={50}
-            objectFit="contain"
-            className="social-media"
-            src={whatsapp}
-            alt="whatsapp"
-          />
-          <a
-            href="https://api.whatsapp.com/send?phone=5511978057417&text="
-            target={"black"}
-          >
-            Whatsapp
-          </a>
-        </li>
+
         <li>
           <Image
             width={50}
