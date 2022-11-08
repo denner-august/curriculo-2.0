@@ -17,6 +17,7 @@ export function filtraUrlName(request: any) {
     "fale-muito-mais-agora",
     "ignite-interface-com-chakra-ui",
     "ignite-fundamentos-next",
+    "readme-creator",
   ];
 
   const findProjects = projects.map((item) => {
