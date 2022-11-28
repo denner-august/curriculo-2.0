@@ -18,6 +18,7 @@ export function filtraUrlName(request: any) {
     "ignite-interface-com-chakra-ui",
     "ignite-fundamentos-next",
     "readme-creator",
+    "ignite-blog",
   ];
 
   const findProjects = projects.map((item) => {
@@ -40,6 +41,8 @@ export function filtraUrlName(request: any) {
           ? "worldtrip5-chakra.vercel.app"
           : item.targets.production.name === "ignite-fundamentos-next"
           ? "ignite-fundamentos-next.vercel.app"
+          : item.targets.production.name === "ignite-blog"
+          ? "learning-now-blog.vercel.app/"
           : item.targets.production.url,
     };
   });
