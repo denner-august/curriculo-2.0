@@ -19,6 +19,7 @@ export function filtraUrlName(request: any) {
     "ignite-fundamentos-next",
     "readme-creator",
     "ignite-blog",
+    "job-now",
   ];
 
   const findProjects = projects.map((item) => {
@@ -43,6 +44,8 @@ export function filtraUrlName(request: any) {
           ? "ignite-fundamentos-next.vercel.app"
           : item.targets.production.name === "ignite-blog"
           ? "learning-now-blog.vercel.app/"
+          : item.targets.production.name === "job-now"
+          ? "job-now-virid.vercel.app/"
           : item.targets.production.url,
     };
   });
