@@ -9,16 +9,9 @@ import { GetStaticProps } from "next";
 import { ContainerPrincipal } from "../styles/styles";
 import { filtraUrlName } from "../../services/projetos";
 import { getPrismicClient } from "../../services/prismicClient";
+import { PrincipalProps } from "../../types";
 
-type PrincipalProps = {
-  dados: { item: string };
-  post: {
-    titulo: string;
-    conteudo: { paragrafo1: []; paragra2: []; paragrafo3: [] };
-  };
-};
-
-export default function Principal({ dados, post }: PrincipalProps) {
+export default function Principal({ dados }: PrincipalProps) {
   return (
     <ContainerPrincipal className="container">
       <Profile />
