@@ -5,21 +5,14 @@ interface ProjectProps {
 export function filtraUrlName(request: any) {
   const projects = [
     "praticando-meu-front-end-react-js",
-    "redux-learning",
-    "nlw-return",
+    "job-now",
     "front-end-challenge-coodesh",
     "fills-calcuer",
     "capitulo-2-ignite",
-    "room-homepage",
-    "formulario-de-inscricao",
-    "testimonial-from-users",
-    "hoteliour",
     "fale-muito-mais-agora",
-    "ignite-interface-com-chakra-ui",
     "ignite-fundamentos-next",
     "readme-creator",
     "ignite-blog",
-    "job-now",
   ];
 
   const findProjects = projects.map((item) => {
@@ -38,8 +31,6 @@ export function filtraUrlName(request: any) {
           ? "capitulo-2-ignite.vercel.app/"
           : item.targets.production.name === "fills-calcuer"
           ? "fills-calculeitor.vercel.app/"
-          : item.targets.production.name === "ignite-interface-com-chakra-ui"
-          ? "worldtrip5-chakra.vercel.app"
           : item.targets.production.name === "ignite-fundamentos-next"
           ? "ignite-fundamentos-next.vercel.app"
           : item.targets.production.name === "ignite-blog"
