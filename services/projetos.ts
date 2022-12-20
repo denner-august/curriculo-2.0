@@ -1,6 +1,4 @@
-interface ProjectProps {
-  targets: { production: { name: string; url: string } };
-}
+import { ProjectProps } from "../types/project";
 
 export function filtraUrlName(request: any) {
   const projects = [
