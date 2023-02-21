@@ -1,29 +1,17 @@
 import Experience from "../components/experience";
 import Skills from "../components/skills";
 import Social_Media from "../components/social-media";
-import { ContainerPrincipal } from "../styles/styles";
 import Education from "../components/education/index";
 import Profile from "../components/profile";
 import Projects from "../components/projects/index";
 import axios from "axios";
 import { GetStaticProps } from "next";
-import { useEffect } from "react";
-import Swal from "sweetalert2";
+import { ContainerPrincipal } from "../styles/styles";
+import { filtraUrlName } from "../../services/projetos";
+import { getPrismicClient } from "../../services/prismicClient";
+import { PrincipalProps } from "../../types";
 
-interface requestProps {
-  targets: { production: { name: string; url: string } };
-}
-
-export default function Principal({ dados }: { dados: { item: string } }) {
-  useEffect(() => {
-    Swal.fire({
-      background: "var(--body-bg-color)",
-      color: "white",
-      icon: "info",
-      text: "Este é um Projeto ainda em desenvolvimento ",
-    });
-  });
-
+export default function Principal({ dados }: PrincipalProps) {
   return (
     <ContainerPrincipal className="container">
       <Profile />
@@ -48,45 +36,16 @@ export const getStaticProps: GetStaticProps = async () => {
     .then((response) => response.data)
     .then((response) => response.projects);
 
-  const projects = [
-    "redux-learning",
-    "nlw-return",
-    "front-end-challenge-coodesh",
-    "url-short",
-    "fills-calcuer",
-    "room-homepage",
-    "formulario-de-inscricao",
-    "testimonial-from-users",
-    "hoteliour",
-    "fale-muito-mais-agora",
-  ];
+  const prismic = getPrismicClient();
 
-  interface ProjectProps {
-    targets: { production: { name: string; url: string } };
-  }
+  const prismicRequest = await prismic.getAllByType("teste");
 
-  function filtraUrlName() {
-    const findProjects = projects.map((item) => {
-      return request.find(
-        (data: { targets: { production: { name: string } } }) =>
-          data.targets.production.name === item
-      );
-    });
-
-    const filterProjects = findProjects.map((item: ProjectProps) => {
-      return {
-        name: item.targets.production.name,
-        url: item.targets.production.url,
-      };
-    });
-
-    return filterProjects;
-  }
+  const DataRequest = prismicRequest.map((post) => post.data);
 
   return {
     props: {
-      dados: filtraUrlName(),
+      dados: filtraUrlName(request),
+      posts: DataRequest,
     },
-    revalidate: 86400,
   };
 };

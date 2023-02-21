@@ -4,6 +4,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   height: auto;
+
   p {
     height: auto;
     font-size: 1.5rem;

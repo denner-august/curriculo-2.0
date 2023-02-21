@@ -4,7 +4,7 @@ import { Container } from "./styles";
 import Linkedin from "../../../public/image/social-icons/linkedin.jpeg";
 
 import Github from "../../../public/image/social-icons/github.png";
-import whatsapp from "../../../public/image/social-icons/whatsapp.png";
+import youtube from "../../../public/image/social-icons/youtube.png";
 import Email from "../../../public/image/social-icons/email.png";
 
 export default function Social_Media(): JSX.Element {
@@ -45,22 +45,24 @@ export default function Social_Media(): JSX.Element {
             Github
           </a>
         </li>
+
         <li>
           <Image
             width={50}
             height={50}
             objectFit="contain"
             className="social-media"
-            src={whatsapp}
-            alt="whatsapp"
+            src={youtube}
+            alt="Youtube"
           />
           <a
-            href="https://api.whatsapp.com/send?phone=5511978057417&text="
+            href="https://www.youtube.com/channel/UC83BbwCzMr-p4MXuDH_ZyCw"
             target={"black"}
           >
-            Whatsapp
+            Youtube
           </a>
         </li>
+
         <li>
           <Image
             width={50}
