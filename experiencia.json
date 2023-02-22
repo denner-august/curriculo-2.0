@@ -1,0 +1,17 @@
+{
+    "experiencia": [
+        {"Name":"Desenvolvendome", 
+        "Descricao":"Nossa equipe tem oportunidade de adquirir e aperfeiçoar habilidades Hard Skills, Soft Skills, Mindset e Inteligência Emocional",
+        "Soft skills": ["Comunicação", "Colaboração", "Disciplina", "foco", "Autogestão", "Trabalho em equipe", "Resolver problemas", "Qualidade", "Empatia", "Resiliência"],
+        "Hard Skills": [
+        "Projeto Básico",
+        "Gestão e Planejamento de Projeto Ágil",
+        "Ferramentas para Aumentar a Produtividade.",
+        "Desenvolvimento e Análise de Código",
+        "Processo de Desenvolvimento, Entrega e Qualidade de Software.",
+        "Gestão de Versionamento Código",
+        "Gestão de Qualidade de Código"],
+        "Tecnologias":["Git", "Github", "Gitflow", "Linux", "Terminal"," IDE", "AWS", "Postgres", "Restful"]
+        }
+    ]
+}
