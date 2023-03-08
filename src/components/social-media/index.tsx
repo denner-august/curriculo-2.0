@@ -52,23 +52,6 @@ export default function Social_Media(): JSX.Element {
             height={50}
             objectFit="contain"
             className="social-media"
-            src={youtube}
-            alt="Youtube"
-          />
-          <a
-            href="https://www.youtube.com/channel/UC83BbwCzMr-p4MXuDH_ZyCw"
-            target={"black"}
-          >
-            Youtube
-          </a>
-        </li>
-
-        <li>
-          <Image
-            width={50}
-            height={50}
-            objectFit="contain"
-            className="social-media"
             src={Email}
             alt="whatsapp"
           />
