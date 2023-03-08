@@ -20,6 +20,7 @@ export default function Principal({ dados }: PrincipalProps) {
       <Experience />
       <Education />
       <Projects dados={dados} />
+
     </ContainerPrincipal>
   );
 }
@@ -33,8 +34,8 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const request = await axios
     .get("https://api.vercel.com/v9/projects?limit=28", config)
-    .then((response) => response.data)
-    .then((response) => response.projects);
+    .then((response) => response.data.projects)
+
 
   const prismic = getPrismicClient();
 
