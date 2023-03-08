@@ -5,13 +5,12 @@ export default function Skills() {
     "Javascript",
     "Typescript",
     "Reactjs",
+    "NextJS",
     "Scss",
     "Styled components",
     "Git",
     "Github",
-    "Modelagem de dados",
-    "Postgres",
-    "NextJS",
+    "Postgres"
   ];
 
   const renderTecnologia = () => {
