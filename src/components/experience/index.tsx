@@ -1,24 +1,49 @@
 import { Container } from "./styles";
+import { useState } from "react";
+
+import BasicModal from "../modal";
+
+import trabalhos from '../../../experiencia.json'
+
+import { experienciaProps } from "../../../types";
+
 
 export default function Experience() {
+
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
+  const [dados, setDados] = useState({} as experienciaProps)
+
+  function RequestModal(name: string) {
+
+    let experienciaFilter = trabalhos.experiencia.filter(item => item.Name === name)
+
+    if (experienciaFilter.length === 0) {
+      return setDados({} as experienciaProps)
+    }
+
+    experienciaFilter.forEach((item: any) => setDados(item))
+    handleOpen()
+  }
+
   return (
     <Container className="experience">
       <p>Experiencias</p>
       <ul>
-        <li>
+        <li onClick={() => RequestModal("Sygecom")}>
           Estágio: Sygecom Informatica <br></br>
           05/2021 - 05/2022 Desenvolvedor mobile <br></br>
         </li>
 
-        <li>
-          Projeto: Flls-Calculeitor<br></br>
-          2021- Em Desenvolvimento/ Portifolio <br></br>
+        <li onClick={() => RequestModal("Desenvolvendome")} >
+          Aprendiz: DesenvolvendoMe<br></br>
+          dez de 2022 - o momento <br></br>
         </li>
 
-        <li>
-          Projeto: Praticando meu front-end<br></br>
-          2019 - Em Desenvolvimento/ Portifolio
-        </li>
+        <BasicModal open={open} handleClose={handleClose} experiencia={dados} />
+
       </ul>
     </Container>
   );
