@@ -1,0 +1,33 @@
+.Container{
+    font-size: 1.3rem;
+    background-color:var( --bg-cards);
+    ul{
+        margin: 10px 0px;
+        display: flex;
+        align-items: center;
+
+        
+
+        flex-wrap: wrap;
+
+        p{
+            color: white;
+            font-size: 2rem;
+        }
+
+        li{
+            font-size: 2rem;
+        }
+    }
+}
+
+.titulo {
+    font-size: 2rem;
+    color: white;
+}
+
+.descricao{
+    width: 90vw;
+    font-size: 1.4rem;
+   
+}
