@@ -27,6 +27,7 @@ specifiers:
   sass: ^1.58.3
   slice-machine-ui: ^0.4.2
   styled-components: ^5.3.6
+  swiper: ^9.1.0
   typescript: 4.6.2
 
 dependencies:
@@ -48,6 +49,7 @@ dependencies:
   react-dom: 17.0.2_react@17.0.2
   sass: 1.58.3
   styled-components: 5.3.6_sfoxds7t5ydpegc3knd667wn6m
+  swiper: 9.1.0
 
 devDependencies:
   '@types/node': 17.0.21
@@ -8371,6 +8373,10 @@ packages:
     resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
     dev: true
 
+  /ssr-window/4.0.2:
+    resolution: {integrity: sha512-ISv/Ch+ig7SOtw7G2+qkwfVASzazUnvlDTwypdLoPoySv+6MqlOV10VwPSE6EWkGjhW50lUmghPmpYZXMu/+AQ==}
+    dev: false
+
   /ssri/9.0.1:
     resolution: {integrity: sha512-o57Wcn66jMQvfHG1FlYbWeZWW/dHZhJXjpIcTfXldXEk5nz5lStPo3mK0OJQfGR3RbZUlbISexbljkJzuEj/8Q==}
     engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
@@ -8577,6 +8583,13 @@ packages:
       unquote: 1.1.1
       util.promisify: 1.0.1
     dev: true
+
+  /swiper/9.1.0:
+    resolution: {integrity: sha512-Ck8CywwfUghkbUAHbxTAWyeUAcNrIDNJ6EnKFBGGcHDjeqbh0Jq08RbmD5fMu1a0oOv1eIkUGVkqNJy/asm+yA==}
+    engines: {node: '>= 4.7.0'}
+    dependencies:
+      ssr-window: 4.0.2
+    dev: false
 
   /tar-fs/2.1.1:
     resolution: {integrity: sha512-V0r2Y9scmbDRLCNex/+hYzvp/zyYjvFbHPNgVTKfQvVrb6guiE/fxP+XblDNR011utopbkex2nM4dHNV6GDsng==}
