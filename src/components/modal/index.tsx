@@ -1,4 +1,4 @@
-import Modal from '@mui/material/Modal';
+import Dialog from '@mui/material/Dialog';
 
 import styles from './styles.module.scss'
 import { experienciaProps } from '../../../types';
@@ -30,12 +30,15 @@ export default function BasicModal({ open = false, handleClose, experiencia }: M
 
     return (
         <div onClick={handleClose}>
-            <Modal
+            <Dialog
                 open={open}
                 onClose={handleClose}
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
+                maxWidth={'lg'}
+
             >
+
                 <div className={styles.Container}>
                     <p className={styles.titulo}>Empresa: {experiencia.Name}</p>
                     <p className={styles.descricao}>Descrição: {experiencia.Descricao}</p>
@@ -53,7 +56,8 @@ export default function BasicModal({ open = false, handleClose, experiencia }: M
                         {Tecnoloogia()}
                     </ul>
                 </div>
-            </Modal>
+            </Dialog>
         </div>
     );
 }
+
