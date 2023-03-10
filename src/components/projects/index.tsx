@@ -1,7 +1,25 @@
 import { Container } from "./styles";
-export default function Projects({ dados }: any) {
+
+interface projectsProps {
+  dados: [{ name: string, url: string }]
+}
+
+export default function Projects({ dados }: projectsProps) {
+
+  function changeNames(name: string) {
+    if (name === "capitulo-2-ignite") {
+      return "Dt-money"
+    }
+
+    if (name === "ignite-fundamentos-next") {
+      return "Ig.news"
+    }
+
+    return name
+  }
+
   function RenderList() {
-    return dados.map((item: { name: string; url: string }, index: string) => {
+    return dados.map((item: { name: string; url: string }, index: number) => {
       return (
         <li key={index}>
           <a
@@ -9,7 +27,9 @@ export default function Projects({ dados }: any) {
             target={"_blank"}
             rel="noopener noreferrer"
           >
-            {item.name}
+
+
+            {changeNames(item.name)}
           </a>
         </li>
       );
