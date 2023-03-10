@@ -7,7 +7,6 @@ import trabalhos from '../../../experiencia.json'
 
 import { experienciaProps } from "../../../types";
 
-
 export default function Experience() {
 
   const [open, setOpen] = useState(false);
@@ -42,7 +41,7 @@ export default function Experience() {
           dez de 2022 - o momento <br></br>
         </li>
 
-        <BasicModal open={open} handleClose={handleClose} experiencia={dados} />
+        {open ? <BasicModal open={open} handleClose={handleClose} experiencia={dados} /> : null}
 
       </ul>
     </Container>
