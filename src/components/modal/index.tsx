@@ -12,18 +12,18 @@ interface ModalProps {
 export default function BasicModal({ open = false, handleClose, experiencia }: ModalProps) {
 
     function SoftSkills() {
-        return experiencia['Soft skills'].map((item, index) => {
+        return experiencia['Soft skills']?.map((item, index) => {
             return <li key={item}>{item}</li>
         })
     }
 
     function HardSkills() {
-        return experiencia['Hard Skills'].map((item, index) => {
+        return experiencia['Hard Skills']?.map((item, index) => {
             return <li key={item}>{item}</li>
         })
     }
     function Tecnoloogia() {
-        return experiencia['Tecnologias'].map((item, index) => {
+        return experiencia['Tecnologias']?.map((item, index) => {
             return <li key={item}>{item}</li>
         })
     }
