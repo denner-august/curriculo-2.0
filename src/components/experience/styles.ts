@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  /* height: auto; */
 
   ul {
     display: flex;
@@ -27,7 +26,7 @@ export const Container = styled.div`
 
   @media screen and (max-width: 768px) {
     height: 400px;
-    /* height: 500px; */
+
     p {
       text-align: center;
     }
