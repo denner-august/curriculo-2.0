@@ -20,7 +20,6 @@ export const Container = styled.div`
     li:hover {
       color: white;
       transition: 0.2s;
-      cursor: pointer;
     }
   }
 
