@@ -37,16 +37,15 @@ export const getStaticProps: GetStaticProps = async () => {
     .then((response) => response.data.projects)
 
 
-  const prismic = getPrismicClient();
+  // const prismic = getPrismicClient();
 
-  const prismicRequest = await prismic.getAllByType("teste");
+  // const prismicRequest = await prismic.getAllByType("teste");
 
-  const DataRequest = prismicRequest.map((post) => post.data);
+  // const DataRequest = prismicRequest.map((post) => post.data); // result for request
 
   return {
     props: {
       dados: filtraUrlName(request),
-      posts: DataRequest,
     },
   };
 };
