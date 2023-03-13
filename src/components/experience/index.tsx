@@ -17,13 +17,13 @@ export default function Experience() {
 
   function RequestModal(name: string) {
 
-    let experienciaFilter = trabalhos.experiencia.filter(item => item.Name === name)
+    let experienciaFilter = trabalhos.experiencia.find(item => item.Name.includes(name))
 
-    if (experienciaFilter.length === 0) {
+    if (!experienciaFilter) {
       return setDados({} as experienciaProps)
     }
 
-    experienciaFilter.forEach((item: any) => setDados(item))
+    setDados(experienciaFilter)
     handleOpen()
   }
 
