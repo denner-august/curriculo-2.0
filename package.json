@@ -21,7 +21,7 @@
     "@prismicio/next": "^0.1.9",
     "@prismicio/react": "^2.5.2",
     "@prismicio/slice-simulator-react": "^0.2.3",
-    "axios": "^0.26.1",
+    "axios": "^1.6.0",
     "commitizen": "^4.3.0",
     "framer-motion": "^6.5.1",
     "next": "12.1.0",
