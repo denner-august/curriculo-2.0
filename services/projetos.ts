@@ -1,4 +1,4 @@
-import { ProjectProps } from "../types/project";
+import { ProjectProps, requestProps } from "../types/project";
 
 export function filtraUrlName(request: any) {
   const projects = [
@@ -7,16 +7,14 @@ export function filtraUrlName(request: any) {
     "front-end-challenge-coodesh",
     "fills-calcuer",
     "capitulo-2-ignite",
-    "fale-muito-mais-agora",
     "ignite-fundamentos-next",
     "readme-creator",
-    "ignite-blog",
+    "codelandia-challenge-01",
   ];
 
   const findProjects = projects.map((item) => {
     return request.find(
-      (data: { targets: { production: { name: string } } }) =>
-        data.targets.production.name === item
+      (data: requestProps) => data.targets.production.name === item
     );
   });
 
@@ -31,10 +29,10 @@ export function filtraUrlName(request: any) {
           ? "fills-calculeitor.vercel.app/"
           : item.targets.production.name === "ignite-fundamentos-next"
           ? "ignite-fundamentos-next.vercel.app"
-          : item.targets.production.name === "ignite-blog"
-          ? "learning-now-blog.vercel.app/"
           : item.targets.production.name === "job-now"
           ? "job-now-virid.vercel.app/"
+          : item.targets.production.name === "codelandia-challenge-01"
+          ? "codelandia-challenge-01.vercel.app"
           : item.targets.production.url,
     };
   });
