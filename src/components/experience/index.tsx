@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import BasicModal from "../modal";
 
-import trabalhos from "../../../experiencia.json";
+import { experiencia } from "../../../experiencia";
 
 import { experienciaProps } from "../../../types";
 
@@ -16,7 +16,7 @@ export default function Experience() {
   const [dados, setDados] = useState({} as experienciaProps);
 
   function RequestModal(name: string) {
-    let experienciaFilter = trabalhos.experiencia.find((item) =>
+    let experienciaFilter = experiencia.find((item) =>
       item.Name.includes(name)
     );
 
