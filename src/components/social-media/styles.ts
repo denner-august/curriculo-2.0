@@ -13,6 +13,8 @@ export const Container = styled.div`
     flex-direction: column;
     text-align: center;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     list-style: none;
     margin: 1rem;
 
@@ -36,5 +38,11 @@ export const Container = styled.div`
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+  }
+
+  @media (max-width: 430px) {
+    ul {
+      flex-direction: column;
+    }
   }
 `;

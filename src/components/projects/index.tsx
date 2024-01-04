@@ -1,21 +1,19 @@
 import { Container } from "./styles";
+import { getProject } from "@/../services/requestProject";
 
-interface projectsProps {
-  dados: [{ name: string, url: string }]
-}
-
-export default function Projects({ dados }: projectsProps) {
+export default async function Projects() {
+  const dados = await getProject();
 
   function changeNames(name: string) {
     if (name === "capitulo-2-ignite") {
-      return "Dt-money"
+      return "Dt-money";
     }
 
     if (name === "ignite-fundamentos-next") {
-      return "Ig.news"
+      return "Ig.news";
     }
 
-    return name
+    return name;
   }
 
   function RenderList() {
@@ -27,8 +25,6 @@ export default function Projects({ dados }: projectsProps) {
             target={"_blank"}
             rel="noopener noreferrer"
           >
-
-
             {changeNames(item.name)}
           </a>
         </li>

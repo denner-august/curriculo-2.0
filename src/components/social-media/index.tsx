@@ -1,11 +1,10 @@
-import Image from "next/image";
 import { Container } from "./styles";
 
-import Linkedin from "../../../public/image/social-icons/linkedin.jpeg";
+import Linkedin from "@/../public/image/social-icons/linkedin.jpeg";
+import Github from "@/../public/image/social-icons/github.png";
+import Email from "@/../public/image/social-icons/email.png";
 
-import Github from "../../../public/image/social-icons/github.png";
-import youtube from "../../../public/image/social-icons/youtube.png";
-import Email from "../../../public/image/social-icons/email.png";
+import { IconsImage } from "../../../services/iconsImage";
 
 export default function Social_Media(): JSX.Element {
   function CopyEmail(email: any) {
@@ -17,14 +16,14 @@ export default function Social_Media(): JSX.Element {
     <Container className="social-media">
       <ul>
         <li>
-          <Image
+          <IconsImage
             width={50}
             height={50}
-            objectFit="contain"
             className="social-media"
             src={Linkedin}
             alt="Linkedin"
           />
+
           <a
             href="https://www.linkedin.com/in/denner-bernardes"
             target={"black"}
@@ -33,10 +32,9 @@ export default function Social_Media(): JSX.Element {
           </a>
         </li>
         <li>
-          <Image
+          <IconsImage
             width={50}
             height={50}
-            objectFit="contain"
             className="social-media"
             src={Github}
             alt="Github"
@@ -47,14 +45,14 @@ export default function Social_Media(): JSX.Element {
         </li>
 
         <li>
-          <Image
+          <IconsImage
             width={50}
             height={50}
-            objectFit="contain"
             className="social-media"
             src={Email}
             alt="whatsapp"
           />
+
           <a href="mailto:denner.augusto90@gmail.com">
             <p onClick={(event) => CopyEmail(event)}>
               denner.augusto90@gmail.com
