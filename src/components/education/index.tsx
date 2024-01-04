@@ -6,7 +6,8 @@ export default function Education() {
       <p>Cursos e especializações</p>
       <ul>
         <li>
-          Graduação: Analise e desenvolvimento de sistemas <br></br> termino: dezembro 2022
+          Graduação: Analise e desenvolvimento de sistemas <br></br> termino:
+          dezembro 2022
         </li>
         <li>
           Rocketseat: Ignite 2021 <br /> termino: outubro 2022
