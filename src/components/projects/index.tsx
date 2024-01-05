@@ -1,8 +1,23 @@
+import { useEffect, useState } from "react";
 import { Container } from "./styles";
 import { getProject } from "@/../services/requestProject";
 
-export default async function Projects() {
-  const dados = await getProject();
+interface ProjectsProps {
+  name: string;
+  url: string;
+}
+
+export default function Projects() {
+  const [dados, SetDados] = useState<ProjectsProps[]>([]);
+
+  useEffect(() => {
+    async function GetProjects() {
+      const get = await getProject();
+      SetDados(get);
+    }
+
+    GetProjects();
+  }, []);
 
   function changeNames(name: string) {
     if (name === "capitulo-2-ignite") {
@@ -17,7 +32,7 @@ export default async function Projects() {
   }
 
   function RenderList() {
-    return dados.map((item: { name: string; url: string }, index: number) => {
+    return dados.map((item: ProjectsProps, index: number) => {
       return (
         <li key={index}>
           <a
