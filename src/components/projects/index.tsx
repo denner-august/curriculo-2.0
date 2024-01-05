@@ -7,17 +7,8 @@ interface ProjectsProps {
   url: string;
 }
 
-export default function Projects() {
-  const [dados, SetDados] = useState<ProjectsProps[]>([]);
-
-  useEffect(() => {
-    async function GetProjects() {
-      const get = await getProject();
-      SetDados(get);
-    }
-
-    GetProjects();
-  }, []);
+export default async function Projects() {
+  const dados = await getProject();
 
   function changeNames(name: string) {
     if (name === "capitulo-2-ignite") {
