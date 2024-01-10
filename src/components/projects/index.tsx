@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { Container } from "./styles";
 import { getProject } from "@/../services/requestProject";
 
@@ -7,8 +7,21 @@ interface ProjectsProps {
   url: string;
 }
 
-export default async function Projects() {
-  const dados = await getProject();
+interface test {
+  dados: ProjectsProps[];
+  setProjects: (projects: { name: string; url: string }[]) => void;
+}
+
+export default function Projects() {
+  const [dados, setProjects] = useState([] as ProjectsProps[]);
+
+  useEffect(() => {
+    async function GetProjects() {
+      const dados = await getProject();
+      setProjects(dados);
+    }
+    GetProjects();
+  }, []);
 
   function changeNames(name: string) {
     if (name === "capitulo-2-ignite") {

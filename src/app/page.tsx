@@ -8,6 +8,7 @@ import Profile from "../components/profile";
 import Projects from "../components/projects/index";
 
 import { ContainerPrincipal } from "../styles/styles";
+import Interesse from "@/components/interesse/interesse";
 
 export default function Principal() {
   return (
@@ -19,6 +20,7 @@ export default function Principal() {
       <Experience />
       <Education />
       <Projects />
+      <Interesse />
     </ContainerPrincipal>
   );
 }

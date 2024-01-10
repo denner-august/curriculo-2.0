@@ -39,7 +39,8 @@ h1,h2,p,ul,li,a{
   grid-template-areas:
     "profile projects"
     "social-media education"
-    "skills experience";
+    "skills experience"
+    "interesse interesse";
 }
 
 .profile { grid-area: profile;
@@ -73,6 +74,11 @@ border-radius:var(--bord-card)  }
 background-color:var( --bg-cards); 
 border-radius:var(--bord-card)  }
 
+.interesse { grid-area: interesse;
+
+background-color:var( --bg-cards); 
+border-radius:var(--bord-card)  }
+
  
 @media screen and (max-width: 768px) {
   .container {  display: grid;
@@ -88,7 +94,8 @@ border-radius:var(--bord-card)  }
     "skills"
     "projects"
     "education"
-    "experience";
+    "experience"
+    "interesse";
 }
 
 .profile { grid-area: profile; }
@@ -102,6 +109,8 @@ border-radius:var(--bord-card)  }
 .education { grid-area: education; }
 
 .experience { grid-area: experience; }
+
+.interesse { grid-area: interesse; }
 
 }
 
