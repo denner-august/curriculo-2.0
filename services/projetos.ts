@@ -10,6 +10,7 @@ export function filtraUrlName(request: any) {
     "ignite-fundamentos-next",
     "readme-creator",
     "codelandia-challenge-01",
+    "front-end-code-challenge-smartsite",
   ];
 
   const findProjects = projects.map((item) => {
@@ -19,20 +20,24 @@ export function filtraUrlName(request: any) {
   });
 
   const filterProjects = findProjects.map((item: ProjectProps) => {
+    const namesProject = item.targets.production.name;
+
     return {
       name: item.targets.production.name,
 
       url:
-        item.targets.production.name === "capitulo-2-ignite"
+        namesProject === "capitulo-2-ignite"
           ? "capitulo-2-ignite.vercel.app/"
-          : item.targets.production.name === "fills-calcuer"
+          : namesProject === "fills-calcuer"
           ? "fills-calculeitor.vercel.app/"
-          : item.targets.production.name === "ignite-fundamentos-next"
+          : namesProject === "ignite-fundamentos-next"
           ? "ignite-fundamentos-next.vercel.app"
-          : item.targets.production.name === "job-now"
+          : namesProject === "job-now"
           ? "job-now-virid.vercel.app/"
-          : item.targets.production.name === "codelandia-challenge-01"
+          : namesProject === "codelandia-challenge-01"
           ? "codelandia-challenge-01.vercel.app"
+          : namesProject === "front-end-code-challenge-smartsite"
+          ? "front-end-code-challenge-smartsite-sigma.vercel.app"
           : item.targets.production.url,
     };
   });
