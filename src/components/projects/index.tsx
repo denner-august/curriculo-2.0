@@ -7,11 +7,6 @@ interface ProjectsProps {
   url: string;
 }
 
-interface test {
-  dados: ProjectsProps[];
-  setProjects: (projects: { name: string; url: string }[]) => void;
-}
-
 export default function Projects() {
   const [dados, setProjects] = useState([] as ProjectsProps[]);
 
