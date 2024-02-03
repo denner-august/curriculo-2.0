@@ -6,7 +6,6 @@ export function filtraUrlName(request: any) {
     "job-now",
     "front-end-challenge-coodesh",
     "fills-calcuer",
-    "capitulo-2-ignite",
     "ignite-fundamentos-next",
     "readme-creator",
     "codelandia-challenge-01",
@@ -26,9 +25,7 @@ export function filtraUrlName(request: any) {
       name: item.targets.production.name,
 
       url:
-        namesProject === "capitulo-2-ignite"
-          ? "capitulo-2-ignite.vercel.app/"
-          : namesProject === "fills-calcuer"
+        namesProject === "fills-calcuer"
           ? "fills-calculeitor.vercel.app/"
           : namesProject === "ignite-fundamentos-next"
           ? "ignite-fundamentos-next.vercel.app"
