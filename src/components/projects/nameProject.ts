@@ -1,8 +1,4 @@
 export function changeNames(name: string) {
-  if (name === "capitulo-2-ignite") {
-    return "Dt-money";
-  }
-
   if (name === "ignite-fundamentos-next") {
     return "Ig.news";
   }
