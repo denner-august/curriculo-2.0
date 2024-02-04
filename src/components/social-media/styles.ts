@@ -30,6 +30,17 @@ export const Container = styled.div`
     a:hover {
       color: var(--bg-techs);
     }
+
+    button {
+      cursor: pointer;
+
+      font-size: 1rem;
+      background-color: transparent;
+
+      border: 1px solid #ffff;
+      border-radius: 0.5rem;
+      color: white;
+    }
   }
 
   ul {
