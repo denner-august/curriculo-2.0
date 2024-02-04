@@ -2,7 +2,7 @@ import { Container } from "./styles";
 
 import Linkedin from "@/../public/image/social-icons/linkedin.jpeg";
 import Github from "@/../public/image/social-icons/github.png";
-import Email from "@/../public/image/social-icons/email.png";
+import Email from "@/../public/image/social-icons/mail.png";
 
 import { IconsImage } from "../../../services/iconsImage";
 
@@ -50,13 +50,13 @@ export default function Social_Media(): JSX.Element {
             height={50}
             className="social-media"
             src={Email}
-            alt="whatsapp"
+            alt="Email"
           />
 
-          <a href="mailto:denner.augusto90@gmail.com">
-            <p onClick={(event) => CopyEmail(event)}>
+          <a>
+            <button onClick={(event) => CopyEmail(event)}>
               denner.augusto90@gmail.com
-            </p>
+            </button>
           </a>
         </li>
       </ul>
