@@ -10,6 +10,7 @@ export function filtraUrlName(request: any) {
     "readme-creator",
     "codelandia-challenge-01",
     "front-end-code-challenge-smartsite",
+    "desafio-warren-web",
   ];
 
   const findProjects = projects.map((item) => {
