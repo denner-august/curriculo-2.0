@@ -6,6 +6,9 @@ export default function Education() {
       <p>Cursos e especializações</p>
       <ul>
         <li>
+          FreeCodeCamp: Responsive Web Design <br></br> termino: Março 2024
+        </li>
+        <li>
           Graduação: Analise e desenvolvimento de sistemas <br></br> termino:
           dezembro 2022
         </li>

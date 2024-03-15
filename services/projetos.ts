@@ -1,6 +1,6 @@
 import { ProjectProps, requestProps } from "../types/project";
 
-export function filtraUrlName(request: any) {
+export function filtraUrlName(request: requestProps[]) {
   const projects = [
     "praticando-meu-front-end-react-js",
     "job-now",
@@ -19,7 +19,7 @@ export function filtraUrlName(request: any) {
     );
   });
 
-  const filterProjects = findProjects.map((item: ProjectProps) => {
+  const filterProjects = findProjects.map((item: any) => {
     const namesProject = item.targets.production.name;
 
     return {
@@ -36,6 +36,8 @@ export function filtraUrlName(request: any) {
           ? "codelandia-challenge-01.vercel.app"
           : namesProject === "front-end-code-challenge-smartsite"
           ? "front-end-code-challenge-smartsite-sigma.vercel.app"
+          : namesProject === "readme-creator"
+          ? "readme-creator.vercel.app/"
           : item.targets.production.url,
     };
   });
