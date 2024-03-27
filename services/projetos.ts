@@ -38,6 +38,8 @@ export function filtraUrlName(request: requestProps[]) {
           ? "front-end-code-challenge-smartsite-sigma.vercel.app"
           : namesProject === "readme-creator"
           ? "readme-creator.vercel.app/"
+          : namesProject === "praticando-meu-front-end-react-js"
+          ? "praticando-meu-front-end-react-js.vercel.app/"
           : item.targets.production.url,
     };
   });
