@@ -71,4 +71,24 @@ export const experiencia = [
       "Postgres",
     ],
   },
+
+  {
+    Name: "Grupo Simios",
+    Descricao:
+      "Com foco no Grupo Símios, busco contribuir com meu trabalho voluntário para desenvolver soluções tecnológicas inovadoras que atendam às necessidades específicas das ONGs.",
+
+    "Soft skills": [
+      "Comunicação",
+      "Colaboração",
+      "Disciplina",
+      "foco",
+      "Trabalho em equipe",
+      "Resolver problemas",
+      "Qualidade",
+      "Empatia",
+      "Resiliência",
+    ],
+    "Hard Skills": [],
+    Tecnologias: [],
+  },
 ];
