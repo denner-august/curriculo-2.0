@@ -32,14 +32,19 @@ export default function Experience() {
     <Container className="experience">
       <p>Experiencias</p>
       <ul>
-        <li onClick={() => RequestModal("Sygecom")}>
-          Estágio: Sygecom Informatica <br></br>
-          05/2021 - 05/2022 Desenvolvedor mobile <br></br>
+        <li onClick={() => RequestModal("Grupo Simios")}>
+          Desenvolvedor web - Grupo Símios <br />
+          abril 2024 - atual
         </li>
 
         <li onClick={() => RequestModal("Desenvolvendome")}>
-          Aprendiz: DesenvolvendoMe<br></br>
-          dez de 2022 - o momento <br></br>
+          Aprendiz: DesenvolvendoMe <br />
+          dezembro 2022 - maio 2023
+        </li>
+
+        <li onClick={() => RequestModal("Sygecom")}>
+          Estágio: Sygecom Informatica - Desenvolvedor web <br />
+          maio 2021 - maio 2022 <br />
         </li>
 
         {open ? (
