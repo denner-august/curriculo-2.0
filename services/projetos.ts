@@ -1,4 +1,4 @@
-import { ProjectProps, requestProps } from "../types/project";
+import { requestProps } from "../types/project";
 
 export function filtraUrlName(request: requestProps[]) {
   const projects = [
