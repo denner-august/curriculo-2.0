@@ -10,17 +10,33 @@ import Projects from "../components/projects/index";
 import { ContainerPrincipal } from "../styles/styles";
 import Interesse from "@/components/interesse/interesse";
 
+import { ToastContainer } from "react-toastify";
+
 export default function Principal() {
   return (
-    <ContainerPrincipal className="container">
-      <GlobalStyle />
-      <Profile />
-      <Social_Media />
-      <Skills />
-      <Experience />
-      <Education />
-      <Projects />
-      <Interesse />
-    </ContainerPrincipal>
+    <>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
+      <ContainerPrincipal className="container">
+        <GlobalStyle />
+        <Profile />
+        <Social_Media />
+        <Skills />
+        <Experience />
+        <Education />
+        <Projects />
+        <Interesse />
+      </ContainerPrincipal>
+    </>
   );
 }

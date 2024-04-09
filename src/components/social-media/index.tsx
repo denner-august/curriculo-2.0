@@ -5,11 +5,14 @@ import Github from "@/../public/image/social-icons/github.png";
 import Email from "@/../public/image/social-icons/mail.png";
 
 import { IconsImage } from "../../../services/iconsImage";
+import { AlertCopyEmail } from "../../../notification/email";
 
 export default function Social_Media(): JSX.Element {
   function CopyEmail(email: any) {
-    navigator.clipboard.writeText(email.target.innerHTML);
-    alert("email copiado");
+    const StringEmail = email.target.innerHTML;
+
+    navigator.clipboard.writeText(StringEmail);
+    AlertCopyEmail(StringEmail);
   }
 
   return (
