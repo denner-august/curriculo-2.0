@@ -39,7 +39,7 @@ export default function Education() {
         <RenderCursos
           nome="  Git e GitHub: Formação Básica "
           data="
-          M aio de 2022"
+          Maio de 2022"
         />
       </ul>
     </Container>
