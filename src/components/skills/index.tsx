@@ -10,7 +10,7 @@ export default function Skills() {
     "Styled components",
     "Git",
     "Github",
-    "Postgres"
+    "Postgres",
   ];
 
   const renderTecnologia = () => {
