@@ -8,6 +8,10 @@ export default function Education() {
 
       <ul>
         <RenderCursos
+          nome="Pos-graduação: PUCRS - Desenvolvimento full stack"
+          data="Abril 2025"
+        />
+        <RenderCursos
           nome="CC50: Introdução à Ciência da Computação - O Curso de Harvard, no Brasil"
           data="Março 2024"
         />
@@ -19,23 +23,23 @@ export default function Education() {
         <RenderCursos
           nome="Graduação: Analise e desenvolvimento de sistemas"
           data="
-          dezembro 2022"
+          Dezembro 2022"
         />
         <RenderCursos
           nome="Rocketseat: Ignite 2021 "
           data="
-          outubro 2022"
+          Outubro 2022"
         />
 
         <RenderCursos
           nome="Desenvolvimento Ágil de Software "
           data="
-           maio de 2022"
+           Maio de 2022"
         />
         <RenderCursos
           nome="  Git e GitHub: Formação Básica "
           data="
-          maio de 2022"
+          M aio de 2022"
         />
       </ul>
     </Container>
