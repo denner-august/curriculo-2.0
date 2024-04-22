@@ -7,10 +7,7 @@ export default function Education() {
       <p>Cursos e especializações</p>
 
       <ul>
-        <RenderCursos
-          nome="Pos-graduação: PUCRS - Desenvolvimento full stack"
-          data="Abril 2025"
-        />
+      
         <RenderCursos
           nome="CC50: Introdução à Ciência da Computação - O Curso de Harvard, no Brasil"
           data="Março 2024"
