@@ -2,7 +2,7 @@ export type PrincipalProps = {
   dados: [{ name: string; url: string }];
   post: {
     titulo: string;
-    conteudo: { paragrafo1: []; paragra2: []; paragrafo3: [] };
+    conteudo: { paragrafo1: []; paragrafo2: []; paragrafo3: [] };
   };
 };
 

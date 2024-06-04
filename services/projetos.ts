@@ -3,7 +3,6 @@ import { requestProps } from "../types/project";
 export function filtraUrlName(request: requestProps[]) {
   const projects = [
     "praticando-meu-front-end-react-js",
-    "job-now",
     "front-end-challenge-coodesh",
     "fills-calcuer",
     "ignite-fundamentos-next",
@@ -11,6 +10,7 @@ export function filtraUrlName(request: requestProps[]) {
     "codelandia-challenge-01",
     "front-end-code-challenge-smartsite",
     "desafio-warren-web",
+    "job-juniors",
   ];
 
   const findProjects = projects.map((item) => {
@@ -30,8 +30,8 @@ export function filtraUrlName(request: requestProps[]) {
           ? "fills-calculeitor.vercel.app/"
           : namesProject === "ignite-fundamentos-next"
           ? "ignite-fundamentos-next.vercel.app"
-          : namesProject === "job-now"
-          ? "job-now-virid.vercel.app/"
+          : namesProject === "job-juniors"
+          ? "job-juniors.vercel.app/"
           : namesProject === "codelandia-challenge-01"
           ? "codelandia-challenge-01.vercel.app"
           : namesProject === "front-end-code-challenge-smartsite"
