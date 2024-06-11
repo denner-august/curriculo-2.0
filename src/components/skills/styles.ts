@@ -25,7 +25,7 @@ export const Container = styled.div`
 
       text-align: center;
 
-      color: #f0e7e7;
+      color: #000;
       background-color: var(--text-color);
     }
 

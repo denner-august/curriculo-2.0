@@ -8,10 +8,10 @@ import { IconsImage } from "../../../services/iconsImage";
 import { AlertCopyEmail } from "../../../notification/email";
 
 export default function Social_Media(): JSX.Element {
-  function CopyEmail(email: any) {
+  async function CopyEmail(email: any) {
     const StringEmail = email.target.innerHTML;
 
-    navigator.clipboard.writeText(StringEmail);
+    await navigator.clipboard.writeText(StringEmail);
     AlertCopyEmail(StringEmail);
   }
 
