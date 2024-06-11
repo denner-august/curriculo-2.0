@@ -1,5 +1,5 @@
 "use client";
-import { GlobalStyle } from "../styles/Global";
+import { GlobalStyle } from "../components/styles/Global";
 import Experience from "../components/experience";
 import Skills from "../components/skills";
 import Social_Media from "../components/social-media";
@@ -7,7 +7,7 @@ import Education from "../components/education/index";
 import Profile from "../components/profile";
 import Projects from "../components/projects/index";
 
-import { ContainerPrincipal } from "../styles/styles";
+import { ContainerPrincipal } from "../components/styles/styles";
 import Interesse from "@/components/interesse/interesse";
 
 import { ToastContainer } from "react-toastify";

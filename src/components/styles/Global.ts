@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyle = createGlobalStyle`
 :root {
   --body-bg-color: #22212C;
-  --text-color: #837E9F;
+  --text-color: #FFFF;
   --bg-cards: #302F3D;
   --bg-techs: #CB92B1;
   --bord-card:10px
