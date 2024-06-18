@@ -2,15 +2,10 @@ import { requestProps } from "../types/project";
 
 export function filtraUrlName(request: requestProps[]) {
   const projects = [
-    "praticando-meu-front-end-react-js",
-    "front-end-challenge-coodesh",
-    "fills-calcuer",
     "ignite-fundamentos-next",
-    "readme-creator",
-    "codelandia-challenge-01",
-    "front-end-code-challenge-smartsite",
     "desafio-warren-web",
-    "job-juniors",
+    "criador-de-readme",
+    "front-end-challenge-coodesh",
   ];
 
   const findProjects = projects.map((item) => {
@@ -26,20 +21,16 @@ export function filtraUrlName(request: requestProps[]) {
       name: item.targets.production.name,
 
       url:
-        namesProject === "fills-calcuer"
-          ? "fills-calculeitor.vercel.app/"
-          : namesProject === "ignite-fundamentos-next"
+        namesProject === "ignite-fundamentos-next"
           ? "ignite-fundamentos-next.vercel.app"
-          : namesProject === "job-juniors"
-          ? "job-juniors.vercel.app/"
-          : namesProject === "codelandia-challenge-01"
-          ? "codelandia-challenge-01.vercel.app"
-          : namesProject === "front-end-code-challenge-smartsite"
-          ? "front-end-code-challenge-smartsite-sigma.vercel.app"
           : namesProject === "readme-creator"
           ? "readme-creator.vercel.app/"
-          : namesProject === "praticando-meu-front-end-react-js"
-          ? "praticando-meu-front-end-react-js.vercel.app/"
+          : namesProject === "criador-de-readme"
+          ? "readme-creator.vercel.app/"
+          : namesProject === "front-end-challenge-coodesh"
+          ? "conexao-pharma.vercel.app"
+          : namesProject === "desafio-warren-web"
+          ? "fluxo-de-fundos.vercel.app"
           : item.targets.production.url,
     };
   });

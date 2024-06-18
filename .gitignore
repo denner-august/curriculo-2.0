@@ -41,3 +41,5 @@ yarn.lock
 *.tsbuildinfo
 .env
 package-lock.json
+
+todo.md
