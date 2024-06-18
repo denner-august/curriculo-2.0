@@ -3,17 +3,12 @@ export function changeNames(name: string) {
     return "Ig.news";
   }
 
-  if (name === "front-end-code-challenge-smartsite") {
-    return "smartsite";
-  }
-
   if (name === "front-end-challenge-coodesh") {
-    return "coodesh-challenge";
+    return "conexao-pharma";
   }
 
-  if (name === "praticando-meu-front-end-react-js") {
-    return "project front-end";
+  if (name === "desafio-warren-web") {
+    return "fluxo-de-fundos";
   }
-
   return name;
 }
