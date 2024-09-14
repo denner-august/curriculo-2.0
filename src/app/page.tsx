@@ -1,4 +1,6 @@
 "use client";
+import { GoogleTagManager } from "@next/third-parties/google";
+
 import { GlobalStyle } from "../components/styles/Global";
 import Experience from "../components/experience";
 import Skills from "../components/skills";
@@ -15,6 +17,7 @@ import { ToastContainer } from "react-toastify";
 export default function Principal() {
   return (
     <>
+      <GoogleTagManager gtmId="GTM-W2MH3C4" />
       <ToastContainer
         position="top-right"
         autoClose={5000}
