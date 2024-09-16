@@ -14,4 +14,5 @@ export type experienciaProps = {
   Competencias?: string[];
   Contribuições?: string[];
   Promoção?: { Cargo: string; Contribuições: string[] };
+  Recomendações: string[];
 };

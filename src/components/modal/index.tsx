@@ -44,6 +44,18 @@ export default function BasicModal({
     return [Cargo, Contribuições];
   }
 
+  function Recomendações() {
+    const Recomendações = experiencia["Recomendações"]?.map((item, index) => {
+      return <li key={item}>{item}</li>;
+    });
+
+    if (Recomendações !== undefined) {
+      return Recomendações;
+    }
+
+    return null;
+  }
+
   return (
     <div onClick={handleClose}>
       <Dialog
@@ -77,6 +89,13 @@ export default function BasicModal({
             <p>Competencias :</p>
             {Competencias()}
           </ul>
+
+          {Recomendações() !== null ? (
+            <ul>
+              <p>Recomendações :</p>
+              {Recomendações()}
+            </ul>
+          ) : null}
         </div>
       </Dialog>
     </div>
