@@ -5,9 +5,9 @@
   ul {
     margin: 10px 0px;
     display: flex;
-    align-items: center;
 
     flex-wrap: wrap;
+    flex-direction: column;
 
     p {
       color: white;
@@ -16,7 +16,12 @@
 
     li {
       font-size: 1.5rem;
+      color: #a7c3ff;
     }
+  }
+  .hardSkills {
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 

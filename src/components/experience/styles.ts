@@ -10,9 +10,10 @@ export const Container = styled.div`
     margin-left: 2rem;
 
     li {
-      color: #ffff;
+      color: #a7c3ff;
       list-style: disc;
       font-size: 1.2rem;
+      margin: 0.5rem 0rem;
     }
     li:hover {
       font-size: 1.3rem;

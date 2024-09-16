@@ -9,7 +9,9 @@ export type PrincipalProps = {
 export type experienciaProps = {
   Name: string;
   Descricao: string;
-  "Soft skills": string[];
-  "Hard Skills": string[];
-  Tecnologias: string[];
+  "Hard Skills"?: string[];
+  Tecnologias?: string[];
+  Competencias?: string[];
+  Contribuições?: string[];
+  Promoção?: { Cargo: string; Contribuições: string[] };
 };

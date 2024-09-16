@@ -30,20 +30,15 @@ export default function Experience() {
 
   return (
     <Container className="experience">
-      <p>Experiencias</p>
+      <p>Experiencias - Clique para mais informações</p>
       <ul>
         <li onClick={() => RequestModal("Grupo Simios")}>
-          Desenvolvedor web - Grupo Símios <br />
-          abril 2024 - atual
-        </li>
-
-        <li onClick={() => RequestModal("Desenvolvendome")}>
-          Aprendiz: DesenvolvendoMe <br />
-          dezembro 2022 - maio 2023
+          Desenvolvedor Full Stack - Grupo Símios (Voluntário) <br />
+          abril 2024 - setembro 2024
         </li>
 
         <li onClick={() => RequestModal("Sygecom")}>
-          Estágio: Sygecom Informatica - Desenvolvedor web <br />
+          Estágio: Sygecom Informatica - Desenvolvedor Full Stack <br />
           maio 2021 - maio 2022 <br />
         </li>
 
