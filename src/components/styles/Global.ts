@@ -40,7 +40,8 @@ h1,h2,p,ul,li,a{
     "profile projects"
     "social-media education"
     "skills experience"
-    "interesse interesse";
+    "interesse Email"
+    
 }
 
 .profile { grid-area: profile;
@@ -79,6 +80,11 @@ border-radius:var(--bord-card)  }
 background-color:var( --bg-cards); 
 border-radius:var(--bord-card)  }
 
+.Email { grid-area: Email;
+
+background-color:var( --bg-cards); 
+border-radius:var(--bord-card)  }
+
  
 @media screen and (max-width: 768px) {
   .container {  display: grid;
@@ -95,7 +101,9 @@ border-radius:var(--bord-card)  }
     "projects"
     "education"
     "experience"
-    "interesse";
+    "interesse"
+    "Email";
+    
 }
 
 .profile { grid-area: profile; }
@@ -111,6 +119,8 @@ border-radius:var(--bord-card)  }
 .experience { grid-area: experience; }
 
 .interesse { grid-area: interesse; }
+
+.Email { grid-area: Email; }
 
 }
 

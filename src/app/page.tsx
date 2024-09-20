@@ -11,6 +11,7 @@ import Projects from "../components/projects/index";
 
 import { ContainerPrincipal } from "../components/styles/styles";
 import Interesse from "@/components/interesse/interesse";
+import { Email } from "@/components/email/Email";
 
 import { ToastContainer } from "react-toastify";
 
@@ -40,6 +41,7 @@ export default function Principal() {
         <Education />
         <Projects />
         <Interesse />
+        <Email />
       </ContainerPrincipal>
     </>
   );
