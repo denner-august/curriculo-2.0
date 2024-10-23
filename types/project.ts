@@ -3,5 +3,5 @@ export interface ProjectProps {
 }
 
 export interface requestProps {
-  targets: { production: { name: string } };
+  targets: { production: { name: string; url: string } };
 }

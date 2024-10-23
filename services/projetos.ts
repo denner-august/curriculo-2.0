@@ -3,22 +3,22 @@ import { requestProps } from "../types/project";
 export function filtraUrlName(request: requestProps[]) {
   const projects = [
     "ignite-fundamentos-next",
+    "readme-creator",
     "desafio-warren-web",
-    "criador-de-readme",
     "front-end-challenge-coodesh",
   ];
 
   const findProjects = projects.map((item) => {
-    return request.find(
-      (data: requestProps) => data.targets.production.name === item
-    );
+    return request
+      .map((item: requestProps) => item.targets.production)
+      .find((data) => data.name === item);
   });
 
   const filterProjects = findProjects.map((item: any) => {
-    const namesProject = item.targets.production.name;
+    const namesProject = item.name;
 
     return {
-      name: item.targets.production.name,
+      name: item.name,
 
       url:
         namesProject === "ignite-fundamentos-next"
@@ -31,7 +31,7 @@ export function filtraUrlName(request: requestProps[]) {
           ? "conexao-pharma.vercel.app"
           : namesProject === "desafio-warren-web"
           ? "fluxo-de-fundos.vercel.app"
-          : item.targets.production.url,
+          : item.url,
     };
   });
 
