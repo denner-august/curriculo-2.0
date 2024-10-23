@@ -1,8 +1,9 @@
+"use client";
 import { Suspense } from "react";
 import { GetProjects } from "./getProjects";
 import { Container } from "./styles";
 
-export default async function Projects() {
+export default function Projects() {
   return (
     <Container className="projects">
       <h2>Projetos Desenvolvidos</h2>
